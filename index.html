@@ -28,7 +28,12 @@
       --shadow: 0 8px 32px rgba(123,34,82,.12);
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+
+    /* 普通 <br> = 桌機+手機都斷（手動設計的斷行）
+       <br class="br-m"> = 只有手機斷，桌機隱藏 */
+    .br-m { display: none; }
+    @media (max-width: 760px) { .br-m { display: inline; } }
     body {
       font-family: 'Noto Sans TC', sans-serif;
       background: var(--dark);
@@ -246,7 +251,7 @@
 
     /* ── INFO ── */
     .infocard {
-      max-width: 560px; margin: 0 auto;
+      width: 100%; max-width: 560px; margin: 0 auto;
       background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
       border-radius: var(--r-lg); overflow: hidden;
     }
@@ -258,7 +263,7 @@
 
     /* ── FORM ── */
     form {
-      max-width: 520px; margin: 0 auto; display: grid; gap: 18px;
+      width: 100%; max-width: 520px; margin: 0 auto; display: grid; gap: 18px;
       background: var(--brand-light); border-radius: var(--r-lg); padding: 40px 36px;
       border: 1.5px solid rgba(123,34,82,.12);
     }
@@ -266,6 +271,7 @@
     .field label { font-size: 14px; font-weight: 700; color: var(--brand-dark); }
     .field label .req { color: #c0392b; }
     .field input, .field select {
+      width: 100%;
       font: inherit; font-size: 16px; padding: 14px 16px; border: 1px solid rgba(123,34,82,.25);
       border-radius: var(--r); background: #fff; color: var(--ink);
     }
@@ -369,8 +375,8 @@
     </h1>
 
     <p class="hero-sub">
-      高一升高二的這個暑假，是最容易拉開差距的幾週。<br>
-      別人在放空，你的孩子在紮實累積——<br>
+      高一升高二的這個暑假，<br class="br-m">是最容易拉開差距的幾週。<br>
+      別人在放空，<br class="br-m">你的孩子在紮實累積——<br>
       開學那天，差距已經悄悄拉開。
     </p>
 
@@ -404,8 +410,8 @@
       <p class="sec-eyebrow">為什麼一個暑假能超前一個學期</p>
       <h2 class="sec-title">這不是口號，<span class="hl">是算出來的</span>。</h2>
       <p class="sec-lead">
-        孩子平常放學回家，真正能坐下來讀的時間其實有限。<br>
-        但這個暑假，他每天都在完整的讀書節奏裡——把時間攤開算，你會嚇一跳。
+        孩子平常放學回家，<br class="br-m">真正能坐下來讀的時間其實有限。<br>
+        但這個暑假，他每天都在完整的讀書節奏裡——<br class="br-m">把時間攤開算，你會嚇一跳。
       </p>
 
       <div class="math-wrap">
@@ -428,7 +434,7 @@
 
       <p class="math-punch">
         同樣的讀書量，<br>
-        別人花一整個學期，<span class="hl">你的孩子一個暑假就完成。</span>
+        別人花一整個學期，<br class="br-m"><span class="hl">你的孩子一個暑假就完成。</span>
       </p>
       <p class="math-note">
         ＊以上為一般情況的概算，實際時數依個人專注程度與出席狀況而定。<br>
@@ -507,7 +513,7 @@
         <p class="tag">給上班爸媽的剛剛好</p>
         <h3 class="serif">您上班的時間，<br>剛好孩子在這裡讀書。</h3>
         <p class="punch">
-          上班時，不必再擔心孩子一個人在家虛度。
+          上班時，<br class="br-m">不必再擔心孩子一個人在家虛度。
         </p>
       </div>
     </div>
@@ -524,7 +530,7 @@
           <span class="cur">$</span><span class="num">3,000</span>
         </div>
         <p class="p-sub">
-          換算下來，一個暑假累積一整個學期的讀書量，<br>
+          換算下來，<br class="br-m">一個暑假累積一整個學期的讀書量，<br>
           <b>平均一天不到 100 元。</b><br><br>
           我們不是要靠這個賺錢，<br>
           只是想在這個關鍵的暑假，<b>陪孩子一起衝。</b>
@@ -540,7 +546,7 @@
       <h2 class="sec-title">梯次與地點</h2>
       <div class="infocard">
         <div class="irow"><span class="k">梯次</span><span class="v">7/13（一）－ 8/21（五）</span></div>
-        <div class="irow"><span class="k">時間</span><span class="v">週一到週五　10:00–17:00（完整讀書節奏規劃）</span></div>
+        <div class="irow"><span class="k">時間</span><span class="v">週一到週五　10:00–17:00<br class="br-m">（完整讀書節奏規劃）</span></div>
         <div class="irow"><span class="k">對象</span><span class="v">高一升高二學生</span></div>
         <div class="irow"><span class="k">費用</span><span class="v">全期 <b>$3,000</b></span></div>
         <div class="irow"><span class="k">地點</span><span class="v">台北得勝者文教<br><span style="font-size:14px;color:rgba(255,255,255,.65);">台北市中正區許昌街17號6樓</span></span></div>
