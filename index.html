@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>一個暑假，超前一個學期｜得勝者文教 暑期讀考班（升高二）</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%237B2252'/%3E%3Ctext x='16' y='23' font-size='17' font-family='Arial,Helvetica,sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3EV+%3C/text%3E%3C/svg%3E" />
   <meta name="description" content="高一升高二的暑假，是最容易拉開差距的6週。每天10:00–17:00完整讀書節奏，紮實累積相當於一整個學期的讀書量。專業輔導老師、有紀律的管理、仿真模擬考，只要 3000 元。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -659,7 +660,7 @@
     /* ── LINE 連結 ──
        把得勝者官方 LINE 的網址填到 LINE_URL，data-line 的按鈕會自動套用。
        （目前留空，按下會提示尚未設定，避免連到錯誤帳號） */
-    const LINE_URL = '';
+    const LINE_URL = 'https://lin.ee/9wuhPBp';
     document.querySelectorAll('[data-line]').forEach(el => {
       if (LINE_URL) {
         el.setAttribute('href', LINE_URL);
@@ -674,7 +675,7 @@
     /* ── 報名表單 → Google Sheet ──
        1. 在 Google Sheet 建立 Apps Script（doPost），部署為「網頁應用程式」
        2. 把部署後的網址貼到下面這行 GS_ENDPOINT（目前留空，會走來電提示） */
-    const GS_ENDPOINT = '';
+    const GS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxMdL60Lbo6rRTDi3nwSEn3wSJuKMFPxum29VY5AiTcZd_1LXR1AyzW2_P2pzDGaBZR/exec';
     const signupForm = document.getElementById('signupForm');
     if (signupForm) {
       signupForm.addEventListener('submit', async (e) => {
